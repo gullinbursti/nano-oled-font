@@ -4,7 +4,7 @@
 #include "FiraCode-Bold8pt7b.h"
 #include "ProggySquare8pt7b.h"
 
-//#define SCREEN_64_H 1
+#define SCREEN_64_H 1
 
 
 #define SCREEN_WIDTH 128
@@ -32,8 +32,8 @@ void setup() {
     display.display();
 
 #   if defined(SCREEN_64_H)
-      display.drawLine(0, 16,  display.width() - 1, 16, SSD1306_WHITE);
-      display.drawLine(4, 17,  display.width() - 8, 17, SSD1306_WHITE);
+      display.drawLine(0, 15,  display.width() - 1, 15, SSD1306_WHITE);
+      display.drawLine(4, 16,  display.width() - 8, 16, SSD1306_WHITE);
 #   else
       display.drawLine(0, 13,  display.width() - 1, 13, SSD1306_WHITE);
       display.drawLine(4, 14,  display.width() - 8, 14, SSD1306_WHITE);
@@ -43,15 +43,15 @@ void setup() {
   
     display.setFont(&FiraCode_Bold8pt7b);
 #   if defined(SCREEN_64_H)
-      display.setCursor(10, 15);
+      display.setCursor(10, 12);
 #   else
-      display.setCursor(10, 10);
+      display.setCursor(10, 19);
 #   endif
     display.println(F("LAN Devices"));
   
     display.setFont(&ProggySquare8pt7b);
 #   if defined(SCREEN_64_H)
-      display.setCursor(42, 40);
+      display.setCursor(42, 44);
 #   else
       display.setCursor(42, 28);
 #   endif
